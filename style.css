@@ -1,0 +1,438 @@
+/*
+Theme Name: Terre
+Theme URI: https://fullstackdigital.io/
+Author: Anton Plauche
+Author URI: https://antonplauche.com/
+Description: A base theme by Anton Plauche for jumpstarting block theme development
+Requires at least: 6.1
+Tested up to: 6.1
+Requires PHP: 5.6
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: terre
+
+Terre WordPress Theme, (C) 2022 Anton Plauche.
+Terre is distributed under the terms of the GNU GPL.
+*/
+
+
+/* ---------------------------
+------------------------------
+|	General Resets        
+------------------------------
+--------------------------- */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+a,
+button,
+input[type="button"],
+input[type="submit"],
+.wp-element-button {
+	transition: all 0.3s ease-in-out;
+}
+
+a,
+a:focus,
+a:hover,
+a:not(.wp-element-button) {
+	text-decoration-thickness: 2px;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: disc;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+/* ---------------------------
+------------------------------
+|	WP Specific Fixes       
+------------------------------
+--------------------------- */
+
+/* add padding to main content */
+main {
+	padding-top: 32px;
+}
+
+/* limit images within posts to not overflow */
+main img {
+	max-width: 100%;
+}
+
+blockquote {
+	margin: 0;
+}
+
+/* add spacing around excerpt link */
+.wp-block-post-excerpt__more-link {
+	margin-top: var(--wp--preset--spacing--xs);
+	margin-bottom: var(--wp--preset--spacing--xs);
+}
+
+/* Prevent align-left/right blocks from messing with footer */
+.site-footer {
+	clear: both;
+}
+
+
+/* ---------------------------
+------------------------------
+|	Block Styling           
+------------------------------
+--------------------------- */
+
+/* Buttons
+--------------------------------------------- */
+
+/* Need to add border to all buttons to match height on secondary style */
+.wp-block-button .wp-element-button {
+	border: 2px solid var(--wp--preset--color--primary);
+}
+
+.wp-block-button.is-style-secondary-button .wp-element-button {
+	background-color: transparent;
+	border: 2px solid var(--wp--preset--color--secondary);
+	color: var(--wp--preset--color--secondary);
+
+}
+
+.wp-block-button.is-style-secondary-button .wp-element-button:hover {
+	background-color: var(--wp--preset--color--secondary);
+	color: var(--wp--preset--color--main);
+}
+
+/* Code
+--------------------------------------------- */
+
+.wp-block-code code {
+	overflow-wrap: normal;
+	overflow-x: auto;
+	tab-size: 2;
+	white-space: pre !important;
+}
+
+*:not(.wp-block-code) > code {
+	background-color: var(--wp--preset--color--bg-secondary);
+	font-size: var(--wp--preset--font-size--sm);
+	padding: 4px 8px;
+	border: 1px solid var(--wp--preset--color--main);
+}
+
+/* Comments
+--------------------------------------------- */
+
+.wp-block-comment-template li {
+	margin-left: 0;
+}
+
+.wp-block-post-comments-form input[type=submit] {
+	width: auto;
+}
+
+.wp-block-post-comments-form p {
+	margin-bottom: var(--wp--custom--spacing--base);
+}
+
+
+.wp-block-post-comments-form .comment-form-cookies-consent label {
+	font-size: var(--wp--preset--font-size--xs);
+} 
+
+/* Group
+--------------------------------------------- */
+
+.wp-block-group.is-style-full-height {
+	align-items: center;
+	display: grid;
+	min-height: 100vh;
+}
+
+.wp-block-group.is-style-rounded {
+	border: 1px solid var(--wp--preset--color--main);
+	border-radius: var(--wp--custom--rounding--base);
+	padding:var(--wp--custom--spacing--base);
+	background:var(--wp--preset--color--bg-secondary);
+}
+
+.wp-block-group.is-style-drop-bg {
+	padding:var(--wp--custom--spacing--base);
+	border: 1px solid var(--wp--preset--color--primary);
+	border-radius: var(--wp--custom--rounding--base);
+	box-shadow: 8px 8px var(--wp--preset--color--primary);
+}
+
+
+/* Image
+--------------------------------------------- */
+
+.wp-block-image.is-style-shadow img {
+	box-shadow: 0 0 32px rgb(0 0 0 / 10%);
+}
+
+.wp-block-image.is-style-drop-bg img {
+	border-radius: var(--wp--custom--rounding--base);
+	border: 1px solid var(--wp--preset--color--primary);
+	box-shadow: 8px 8px var(--wp--preset--color--primary);
+}
+
+/* List
+--------------------------------------------- */
+
+ol li:where(:not([class*='block'])),
+ul li:where(:not([class*='block'])),
+.wp-block-list li {
+	margin-left: 1rem;
+}
+
+.is-style-basic li {
+	list-style-type: none;
+	margin-left: 0;
+}
+
+/* Navigation
+--------------------------------------------- */
+
+.wp-block-navigation__responsive-container.is-menu-open {
+	padding-bottom: 32px;
+	padding-top: 32px;
+}
+
+/* we can get rid of admin bar margin since we handle padding above */
+.has-modal-open .admin-bar .is-menu-open .wp-block-navigation__responsive-dialog {
+	margin-top: 0;
+}
+
+
+/* Navigation Submenu
+--------------------------------------------- */
+
+/* Dropdowns */
+.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
+	padding: 12px;
+	min-width: 220px !important;
+	border-color: var(--wp--preset--color--main);
+}
+
+/* items within dropdown */
+.wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-block-navigation-item__content {
+	padding: 8px 12px !important;
+	line-height: var(--wp--custom--line-height--heading);
+}
+
+/* Submenu on mobile */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container {
+	margin-top: 8px !important;
+	padding-left: 20px !important;
+	padding-right: 10px !important;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+	border-left: 1px solid var(--wp--preset--color--main) !important;
+}
+
+/* Post
+--------------------------------------------- */
+
+.wp-block-post:not(:last-of-type) {
+	margin-bottom: var(--wp--preset--spacing--md);
+}
+
+/* Preformatted
+--------------------------------------------- */
+
+.wp-block-preformatted {
+	overflow-wrap: normal;
+	overflow-x: auto;
+	white-space: pre;
+}
+
+/* Pullquote
+--------------------------------------------- */
+
+.wp-block-pullquote.is-style-plain {
+	border: none;
+}
+
+.wp-block-pullquote p:last-of-type {
+	margin-bottom: 0;
+}
+
+/* Quote
+--------------------------------------------- */
+
+.wp-block-quote.is-style-plain {
+	border: none;
+}
+
+
+/* Search
+--------------------------------------------- */
+
+.wp-block-search__button {
+	margin-left: 0;
+}
+
+/* Separator
+--------------------------------------------- */
+
+.wp-block-separator.is-style-dots:before {
+	font-family: var(--wp--preset--color--primary);
+	font-size: var(--wp--preset--font-size--lg);
+	letter-spacing: 10px;
+	padding-left: 10px;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+	width: 100px;
+}
+
+.wp-block-separator:not(.is-style-dots),
+.wp-block-separator.has-background:not(.is-style-dots) {
+	border-bottom: 1px solid var(--wp--preset--color--primary);
+	border-top: none;
+	height: 1px;
+}
+
+/* Table
+--------------------------------------------- */
+
+.wp-block-table table {
+	border-collapse: collapse;
+}
+
+.wp-block-table.is-style-stripes {
+	border-bottom: none;
+}
+
+.wp-block-table thead {
+	background: var(--wp--preset--color--primary);
+	color:  var(--wp--preset--color--white);
+}
+
+.wp-block-table th {
+	font-weight: var(--wp--custom--font-weight--medium);
+}
+
+.wp-block-table tfoot {
+	border-top: 2px solid var(--wp--preset--color--main);
+	border-bottom: 2px solid var(--wp--preset--color--main);
+	background: var(--wp--preset--color--secondary);
+	color:  var(--wp--preset--color--main);
+}
+
+.wp-block-table td,
+.wp-block-table th,
+.wp-block-table tr,
+.wp-block-table.is-style-stripes td,
+.wp-block-table.is-style-stripes th,
+.wp-block-table.is-style-stripes tr {
+	border: 1px solid var(--wp--preset--color--main);
+}
+
+.wp-block-table td,
+.wp-block-table th {
+	padding: 4px 8px;
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+	background-color: var(--wp--preset--color--bg-secondary);
+}
+
+
+
+
+/* ---------------------------
+------------------------------
+|	Form Styling           
+------------------------------
+--------------------------- */
+
+input,
+select,
+textarea,
+.wp-block-search__input {
+	background-color: var(--wp--preset--color--bg);
+	border: 1px solid var(--wp--preset--color--main);
+	border-radius: 0;
+	color: var(--wp--preset--color--main);
+	font-family: var(--wp--preset--font-family--sans-serif);
+	font-size: var(--wp--preset--font-size--sm);
+	font-weight: var(--wp--custom--font-weight--light);
+	line-height: var(--wp--custom--line-height--body);
+	padding: 12px 24px;
+	width: 100%;
+}
+
+input:focus,
+textarea:focus {
+	background-color: var(--wp--preset--color--bg-secondary);
+	outline: none;
+}
+
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+	width: auto;
+}
+
+input[type="button"],
+input[type="email"],
+input[type="search"],
+input[type="submit"],
+input[type="text"],
+textarea {
+	-webkit-appearance: none;
+}
+
+::placeholder {
+	color: var(--wp--preset--color--main);
+	font-size: var(--wp--preset--font-size--sm);
+	opacity: 0.5;
+}
+
+
+
+/* ---------------------------
+------------------------------
+|	Responsive Overrides           
+------------------------------
+--------------------------- */
+
+
+@media only screen and (min-width: 800px) {
+
+	/* Pullquote
+	--------------------------------------------- */
+
+	.wp-block-pullquote.alignleft,
+	.wp-block-pullquote.alignright {
+		max-width: 360px;
+	}
+
+	.wp-block-pullquote.alignleft {
+		margin-right: 32px !important;
+	}
+
+	.wp-block-pullquote.alignright {
+		margin-left: 32px !important;
+	}
+
+}
