@@ -55,46 +55,12 @@ add_action( 'wp_enqueue_scripts', 'terre_enqueue_style_sheet' );
  * @since 0.0.1
  */
 function terre_blocktheme_gutenberg_styles() {
-  wp_enqueue_script( 'terre-editor-script', get_template_directory_uri() . '/scripts/editor.js', array(), microtime(), true );
+  wp_enqueue_script( 
+		'terre-editor-script', 
+		get_template_directory_uri() . '/scripts/editor.js', 
+		array(), 
+		wp_get_theme( 'terre' )->get( 'Version' ), 
+		true 
+	);
 }
 add_action( 'enqueue_block_editor_assets', 'terre_blocktheme_gutenberg_styles' );
-
-/**
- * Register block styles.
- *
- * @since 0.5.0
- */
-// function terre_register_block_styles() {
-
-// 	$block_styles = array(
-// 		'core/group' => array(
-// 			'full-height'  => __( 'Full-height', 'terre' ),
-// 			'shadow'       => __( 'Shadow', 'terre' ),
-// 			'shadow-solid' => __( 'Shadow Solid', 'terre' ),
-// 		),
-// 		'core/image' => array(
-// 			'shadow'       => __( 'Shadow', 'terre' ),
-// 			'shadow-solid' => __( 'Shadow Solid', 'terre' ),
-// 		),
-// 		'core/list' => array(
-// 			'no-disc' => __( 'No Disc', 'terre' ),
-// 		),
-// 		'core/navigation-link' => array(
-// 			'outline' => __( 'Outline', 'terre' ),
-// 		),
-// 	);
-
-// 	foreach ( $block_styles as $block => $styles ) {
-// 		foreach ( $styles as $style_name => $style_label ) {
-// 			register_block_style(
-// 				$block,
-// 				array(
-// 					'name'  => $style_name,
-// 					'label' => $style_label,
-// 				)
-// 			);
-// 		}
-// 	}
-
-// }
-// add_action( 'init', 'terre_register_block_styles' );
