@@ -230,6 +230,8 @@ ul li:where(:not([class*='block'])),
 	padding: 12px;
 	min-width: 220px !important;
 	border-color: var(--wp--preset--color--main);
+	background: var(--wp--preset--color--bg);
+	color: var(--wp--preset--color--main);
 }
 
 /* items within dropdown */
@@ -246,6 +248,12 @@ ul li:where(:not([class*='block'])),
 	padding-top: 5px !important;
 	padding-bottom: 5px !important;
 	border-left: 1px solid var(--wp--preset--color--main) !important;
+
+}
+
+.wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
+	background: var(--wp--preset--color--bg);
+	color: var(--wp--preset--color--main);
 }
 
 /* Post
