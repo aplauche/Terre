@@ -91,6 +91,13 @@ blockquote {
 /* Prevent align-left/right blocks from messing with footer */
 .site-footer {
 	clear: both;
+
+
+}
+
+.site-footer svg path {
+	fill: var(--wp--preset--color--primary) !important;
+	//stroke: var(--wp--preset--color--primary) ;
 }
 
 
