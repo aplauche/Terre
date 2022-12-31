@@ -202,13 +202,13 @@
 			"fontSizes": [
 				{
 					"fluid": false,
-					"name": "xSmall",
+					"name": "XS",
 					"size": "0.85rem",
 					"slug": "xs"
 				},
 				{
 					"fluid": false,
-					"name": "Small",
+					"name": "SM",
 					"size": "1rem",
 					"slug": "sm"
 				},
@@ -217,7 +217,7 @@
 						"min": "1.1rem",
 						"max": "1.25rem"
 					},
-					"name": "Medium",
+					"name": "MD",
 					"size": "1.25rem",
 					"slug": "md"
 				},
@@ -226,7 +226,7 @@
 						"min": "1.25rem",
 						"max": "1.5rem"
 					},
-					"name": "Large",
+					"name": "LG",
 					"size": "1.5rem",
 					"slug": "lg"
 				},
@@ -235,7 +235,7 @@
 						"min": "1.5rem",
 						"max": "2rem"
 					},
-					"name": "xLarge",
+					"name": "XL",
 					"size": "2rem",
 					"slug": "xl"
 				},
@@ -280,8 +280,8 @@
 						"min": "3.75rem",
 						"max": "6rem"
 					},
-					"name": "6rem",
-					"size": "6XL",
+					"name": "6XL",
+					"size": "6rem",
 					"slug": "6-xl"
 				}
 			]
