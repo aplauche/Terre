@@ -169,13 +169,6 @@ blockquote {
 	min-height: 100vh;
 }
 
-.wp-block-group.is-style-bordered {
-	border: 1px solid var(--wp--preset--color--main);
-	border-radius: var(--wp--custom--rounding--base);
-	padding:var(--wp--custom--spacing--base);
-	background:var(--wp--preset--color--bg-secondary);
-}
-
 .wp-block-group.is-style-drop-bg {
 	padding:var(--wp--custom--spacing--base);
 	border: 1px solid var(--wp--preset--color--primary);

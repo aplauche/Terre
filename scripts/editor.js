@@ -42,10 +42,6 @@ wp.domReady( () => {
           "label": "Full Height",
         },
         {
-          "name": "bordered",
-          "label": "Bordered",
-        },
-        {
           "name": "drop-bg",
           "label": "Drop BG",
         }
