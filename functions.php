@@ -16,6 +16,8 @@ if ( ! function_exists( 'terre_setup' ) ) {
 	 */
 	function terre_setup() {
 
+		add_theme_support( 'editor-styles' );
+
 		// Make theme available for translation.
 		load_theme_textdomain( 'terre', get_template_directory() . '/languages' );
 
