@@ -181,7 +181,7 @@ blockquote {
 --------------------------------------------- */
 
 .wp-block-image.is-style-shadow img {
-	box-shadow: 0 0 32px rgb(0 0 0 / 10%);
+	box-shadow: 0 4px 20px rgb(0 0 0 / 20%);
 }
 
 .wp-block-image.is-style-drop-bg img {
