@@ -74,26 +74,26 @@
 				{
 					"name": "Primary",
 					"slug": "primary",
-					"color": "#A77B56"
+					"color": "#40484e"
 				},
 				{
 					"name": "Secondary",
 					"slug": "secondary",
-					"color": "#D9C0A2"
+					"color": "#97a2aa"
 				},
 				{
-					"name": "Background",
-					"slug": "bg",
+					"name": "Base",
+					"slug": "base",
 					"color": "#fff"
 				},
 				{
-					"name": "Background Secondary",
-					"slug": "bg-secondary",
-					"color": "#f0efeb"
+					"name": "Base Secondary",
+					"slug": "base-secondary",
+					"color": "#e4e4e4"
 				},
 				{
-					"name": "Main",
-					"slug": "main",
+					"name": "Contrast",
+					"slug": "contrast",
 					"color": "#4d4944"
 				},
 				{
@@ -290,8 +290,8 @@
 	},
 	"styles": {
 		"color": {
-			"background": "var(--wp--preset--color--bg)",
-			"text": "var(--wp--preset--color--main)"
+			"background": "var(--wp--preset--color--base)",
+			"text": "var(--wp--preset--color--constrast)"
 		},
 		"spacing": {
 			"blockGap": "calc(var(--wp--custom--spacing--base) * 2)",
@@ -334,7 +334,7 @@
 			},
 			"caption": {
 				"color": {
-					"text": "var(--wp--preset--color--main)"
+					"text": "var(--wp--preset--color--constrast)"
 				},
 				"spacing": {
 					"margin": {
@@ -418,8 +418,8 @@
 					"color": "var(--wp--preset--color--primary)"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--bg-secondary)",
-					"text": "var(--wp--preset--color--main)"
+					"background": "var(--wp--preset--color--base-secondary)",
+					"text": "var(--wp--preset--color--constrast)"
 				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--monospace)",
@@ -543,13 +543,13 @@
 			},
 			"core/preformatted": {
 				"border": {
-					"color": "var(--wp--preset--color--main)",
+					"color": "var(--wp--preset--color--constrast)",
 					"radius": "var(--wp--custom--rounding--base)",
 					"width": "1px"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--bg-secondary)",
-					"text": "var(--wp--preset--color--main)"
+					"background": "var(--wp--preset--color--base-secondary)",
+					"text": "var(--wp--preset--color--constrast)"
 				},
 				"spacing": {
 					"padding": {
