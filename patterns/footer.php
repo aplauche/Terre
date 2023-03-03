@@ -16,7 +16,7 @@
 <!-- /wp:separator -->
 
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">© <?php echo esc_html( gmdate( 'Y' ) ); ?>  - <a href="https://antonplauche.com">Anton Plauche</a></p>
+<p class="has-text-align-center">© <?php echo esc_html( gmdate( 'Y' ) ); ?>  - <a href="https://fullstackdigital.io">Full Stack Digital</a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:separator {"className":"is-style-wide"} -->
