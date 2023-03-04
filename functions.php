@@ -37,7 +37,7 @@ add_action( 'after_setup_theme', 'terre_setup' );
 /**
  * Enqueue theme style sheet.
  *
- * @since 0.0.1
+ * @since 0.1.0
  */
 function terre_enqueue_style_sheet() {
 
@@ -54,7 +54,7 @@ add_action( 'wp_enqueue_scripts', 'terre_enqueue_style_sheet' );
 /**
  * Enqueue editor JS file for Gutenberg mods.
  *
- * @since 0.0.1
+ * @since 0.1.0
  */
 function terre_blocktheme_gutenberg_styles() {
   wp_enqueue_script( 
